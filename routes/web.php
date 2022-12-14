@@ -13,6 +13,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Route::get('/', function () {
+//     // return view('welcome');
+//     // return view('pets');
+//     return view('principal');
+// });
+
+
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('principal');
+})->name('home');
+Route::get('portafolio', function () {
+    return view('portafolio');
+})->name('portafolio');
+Route::get('/mascotas', function () {
+    return view('mascotas');
+})->name('mascotas');
